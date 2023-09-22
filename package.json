@@ -1,0 +1,23 @@
+{
+  "name": "cuddly-fortnight",
+  "version": "1.0.0",
+  "description": "Playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.23",
+    "astro": "^3.1.2",
+    "gsap": "^3.12.2",
+    "sass": "^1.68.0",
+    "split-type": "^0.3.3"
+  }
+}

@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+
+<Layout title="scroll animation">
+
+  <section class="hero gsReveal">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div class="heroPadding">
+            <h1 class="reveal-hero gsAni">111 Hi I'm Samuel, a designer passionate about designing and building delightful websites, products, and design systems that help people make a difference.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="casestudylists gsReveal">
+    <div class="container">
+      <div class="grid-card-layout">
+        <div class="card gsAni">
+          <div class="card-image">
+            <img src="https://placehold.co/800x400" alt="">
+          </div>
+          <div class="card-content">
+            <p>ArchiPro</p>
+            <h4>Building Automated Shipping for Product Suppliers and Shipping Companies</h4>
+          </div>
+        </div>
+        <div class="card gsAni">
+          <div class="card-image">
+            <img class="gsAni" src="https://placehold.co/800x400" alt="">
+          </div>
+          <div class="card-content">
+            <p>ArchiPro</p>
+            <h4>Building a Design System</h4>
+          </div>
+        </div>
+        <div class="card gsAni">
+          <div class="card-image">
+            <img src="https://placehold.co/800x400" alt="">
+          </div>
+          <div class="card-content">
+            <p>Attitude Live</p>
+            <h4>Redesigning the AttitudeLive Website for Accessibility</h4>
+          </div>
+        </div>
+        <div class="card gsAni">
+          <div class="card-image">
+            <img src="https://placehold.co/800x400" alt="">
+          </div>
+          <div class="card-content">
+            <p>JVNZ</p>
+            <h4>Designing an E-commerce Responsive Website for Personalised Children's Books</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="sectionAboutMe">
+  <div class="container">
+    <div class="grid-about-layout">
+      <div class="aboutme gsReveal">
+        <h2 class="gsAni">About me</h2>
+        <p class="gsAni">I'm Samuel a designer with a user-centric design philosophy, I have a decade of industry experience working with diverse clients, from small agencies to large corporations. With a keen eye for detail and a focus on user experience, I strive to create innovative solutions that are both functional and visually appealing.</p>
+        <p class="gsAni">As a designer, I aim to build delightful and impactful experiences for users to make a difference. I am motivated by the opportunity to solve complex problems and make a positive difference in people. I'm passionate about understanding users' needs, behaviour, and aspiration and translating that understanding into delightful and impactful user experiences.</p>
+        <p class="gsAni">Outside of work, I'm a food enthusiast who loves exploring new restaurants and cooking new dishes. And I love to play basketball. Big fan of basketball sport.</p>
+        <div class="gsAni">
+          <img src="https://placehold.co/800x800" alt="">
+        </div>
+      </div>
+      <div class="experience gsReveal">
+        <h2 class="gsAni">Experience</h2>
+        <ul class="experience-lists">
+          <li class="gsAni">
+            <div class="experience-content">
+              <h4>ArchiPro Limited</h4>
+              <p>UX/UI Designer</p>
+            </div>
+            <div class="experience-year">2020 — 2022</div>
+          </li>
+          <li class="gsAni">
+            <div class="experience-content">
+              <h4>Journey Digital</h4>
+              <p>Senior UX/UI Designer</p>
+            </div>
+            <div class="experience-year">2012 — 2020</div>
+          </li>
+          <li class="gsAni">
+            <div class="experience-content">
+              <h4>ArchiPro Limited</h4>
+              <p>UX/UI Designer</p>
+            </div>
+            <div class="experience-year">2020 — 2022</div>
+          </li>
+          <li class="gsAni">
+            <div class="experience-content">
+              <h4>Journey Digital</h4>
+              <p>Senior UX/UI Designer</p>
+            </div>
+            <div class="experience-year">2012 — 2020</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="../scripts/scrollingtrigger4.js"></script>
+</Layout>
+
+
+<style lang="scss">
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    padding: 140px 0;
+    background: cyan;
+  }
+
+  .grid-card-layout {  
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-rows: auto; 
+    gap: 32px 24px;
+    padding: 24px 0;
+
+    @media screen and (min-width: 900px) {
+      display: grid;
+      grid-auto-columns: 1fr; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 32px 24px;
+      padding: 60px 0;
+    }  
+  }
+
+  .card {
+    .card-image {
+      margin-bottom: 16px;
+    }
+
+    .card-content {
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .sectionAboutMe {
+    padding: 24px 0;
+    @media screen and (min-width: 900px) {
+      padding: 80px;
+    }
+    
+  }
+  .grid-about-layout {  
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 80px;
+    @media screen and (min-width: 900px) {
+      grid-auto-columns: 1fr; 
+      grid-template-columns: 1fr 1fr; 
+    }
+  }
+
+  .experience {
+    position: relative;
+    top: 50%;
+  }
+
+  .experience-lists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: baseline;
+      padding: 16px 0;
+      border-bottom: 1px solid black;
+    }
+
+    .experience-content {
+      flex: 1 0 auto;
+      h4 {
+        margin-bottom: 8px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .experience-year {
+      flex: 0 0 auto;
+    }
+  }
+
+</style>
