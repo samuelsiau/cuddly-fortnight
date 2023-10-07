@@ -14,11 +14,13 @@ gsap.utils.toArray(".gsReveal").forEach(function(elem){
 
   const animationChange = gsap.fromTo(items, {
     autoAlpha: 0,
+    y: 10
   }, {
     autoAlpha: 1,
+    y: 0,
     duration: 0.7,
-    delay: 0.5,
-    stagger: 0.2,
+    delay: 0.4,
+    stagger: 0.4,
     ease: "back.out(1.4)",
   });
 
