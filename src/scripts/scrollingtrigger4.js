@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,9 +20,9 @@ gsap.utils.toArray(".gsReveal").forEach(function(elem){
     autoAlpha: 1,
     y: 0,
     duration: 0.7,
-    delay: 0.4,
-    stagger: 0.4,
-    ease: "back.out(1.4)",
+    delay: 0.3,
+    stagger: 0.3,
+    ease: "back.out(0.7)",
   });
 
   ScrollTrigger.create({
@@ -33,3 +34,17 @@ gsap.utils.toArray(".gsReveal").forEach(function(elem){
     // end: "center 5%",
   });
 })
+
+
+// Initial LENIS SMOOTH SCROLL
+
+const lenis = new Lenis()
+lenis.on('scroll', (e) => {
+  // console.log(e);
+  ScrollTrigger.update();
+})
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf);
